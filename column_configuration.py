@@ -1,34 +1,32 @@
 # Column number where all info starts
 CS_index_start = 3
-IB_index_start = CS_index_start + 12
-IC_index_start = IB_index_start + 12
-ID_index_start = IC_index_start + 12
-IF_index_start = ID_index_start + 12
+IB_index_start = 15
+IC_index_start = 27
+ID_index_start = 39
+IF_index_start = 51
 
-M_CS_index_start = IF_index_start + 12
-M_IB_index_start = M_CS_index_start + 12
-M_IC_index_start = M_IB_index_start + 12
-M_ID_index_start = M_IC_index_start + 12
-M_IF_index_start = M_ID_index_start + 12
+M_CS_index_start = 63
+M_IB_index_start = 75
+M_IC_index_start = 87
+M_ID_index_start = 99
+M_IF_index_start = 111
 
-M_OB_index_start = M_IF_index_start + 12
-M_OC_index_start = M_OB_index_start + 12
-M_OD_index_start = M_OC_index_start + 12
-M_OF_index_start = M_OD_index_start + 12
+M_OB_index_start = 122
+M_OC_index_start = 134
+M_OD_index_start = 146
+M_OF_index_start = 158
 
-n_CS_index = M_OF_index_start + 12
-n_IB_index = n_CS_index + 1
-n_IC_index = n_IB_index + 1
-n_ID_index = n_IC_index + 1
-n_IF_index = n_ID_index + 1
-n_OB_index = n_IF_index + 1
-n_OC_index = n_OB_index + 1
-n_OD_index = n_OC_index + 1
-n_OF_index = n_OD_index + 1
+n_CS_index = 170
+n_IB_index = 171
+n_IC_index = 172
+n_ID_index = 173
+n_IF_index = 174
+n_OB_index = 175
+n_OC_index = 176
+n_OD_index = 177
+n_OF_index = 178
 
-OB_index_start = n_OF_index + 1
-OC_index_start = OB_index_start + 12
-OD_index_start = OC_index_start + 12
-OF_index_start = OD_index_start + 12
-
-
+OB_index_start = 179
+OC_index_start = 191
+OD_index_start = 203
+OF_index_start = 215
