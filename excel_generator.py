@@ -167,3 +167,23 @@ def create_bottom_matrix(run_row):
         np.array(M_OF_list_ordered)]).T
 
     return bottom_matrix
+
+
+
+def find_all_start_indices(header_file):
+    """
+    Print all start indices of all column items in top and bottom matrix, and in middle row.
+    They are all to be put in column_configuration.py
+    """
+    
+    # enumerate() only worked with files, had to create own file with transposed header
+    
+    all_start_indices = np.array([[0,0]])
+    
+    with open(header_file, 'r') as f:
+        for i, line in enumerate(f):
+            if line.endswith('_1\n') or line.startswith('n_'):
+                index_start = [line, i+3] # +3 because the first three columns are irrelevant
+                all_start_indices = np.vstack([all_start_indices, index_start])
+    
+    print(f"Here are all start indices, put them in column_configuration.py yourself bitch:\n {all_start_indices}")
