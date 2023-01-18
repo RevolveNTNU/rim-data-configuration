@@ -61,15 +61,15 @@ def create_top_matrix(run_row):
         create the top matrix """
         
     # Collect all info for the top matrix in lists 
-    IF_list_wrong_order = list(map(int, run_row.split()[IF_index_start:IF_index_start+12]))
-    IB_list_wrong_order = list(map(int, run_row.split()[IB_index_start:IB_index_start+12]))
-    CS_list_wrong_order = list(map(int, run_row.split()[CS_index_start:CS_index_start+12]))
-    ID_list_wrong_order = list(map(int, run_row.split()[ID_index_start:ID_index_start+12]))
-    IC_list_wrong_order = list(map(int, run_row.split()[IC_index_start:IC_index_start+12]))
-    OC_list_wrong_order = list(map(int, run_row.split()[OC_index_start:OC_index_start+12]))
-    OD_list_wrong_order = list(map(int, run_row.split()[OD_index_start:OD_index_start+12]))
-    OB_list_wrong_order = list(map(int, run_row.split()[OB_index_start:OB_index_start+12]))
-    OF_list_wrong_order = list(map(int, run_row.split()[OF_index_start:OF_index_start+12]))
+    IF_list_wrong_order = list(map(float, run_row.split()[IF_index_start:IF_index_start+12]))
+    IB_list_wrong_order = list(map(float, run_row.split()[IB_index_start:IB_index_start+12]))
+    CS_list_wrong_order = list(map(float, run_row.split()[CS_index_start:CS_index_start+12]))
+    ID_list_wrong_order = list(map(float, run_row.split()[ID_index_start:ID_index_start+12]))
+    IC_list_wrong_order = list(map(float, run_row.split()[IC_index_start:IC_index_start+12]))
+    OC_list_wrong_order = list(map(float, run_row.split()[OC_index_start:OC_index_start+12]))
+    OD_list_wrong_order = list(map(float, run_row.split()[OD_index_start:OD_index_start+12]))
+    OB_list_wrong_order = list(map(float, run_row.split()[OB_index_start:OB_index_start+12]))
+    OF_list_wrong_order = list(map(float, run_row.split()[OF_index_start:OF_index_start+12]))
     
     
     # Correct order of lists from [1, 10, 11, 12, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -135,15 +135,15 @@ def create_bottom_matrix(run_row):
         create the bottom matrix """
         
     # Collect all info for the bottom matrix in lists 
-    M_IF_list_wrong_order = list(map(int, run_row.split()[M_IF_index_start:M_IF_index_start+11])) #M_IF_11 is not in the file
-    M_IB_list_wrong_order = list(map(int, run_row.split()[M_IB_index_start:M_IB_index_start+12]))
-    M_CS_list_wrong_order = list(map(int, run_row.split()[M_CS_index_start:M_CS_index_start+12]))
-    M_ID_list_wrong_order = list(map(int, run_row.split()[M_ID_index_start:M_ID_index_start+12]))
-    M_IC_list_wrong_order = list(map(int, run_row.split()[M_IC_index_start:M_IC_index_start+12]))
-    M_OC_list_wrong_order = list(map(int, run_row.split()[M_OC_index_start:M_OC_index_start+12]))
-    M_OD_list_wrong_order = list(map(int, run_row.split()[M_OD_index_start:M_OD_index_start+12]))
-    M_OB_list_wrong_order = list(map(int, run_row.split()[M_OB_index_start:M_OB_index_start+12]))
-    M_OF_list_wrong_order = list(map(int, run_row.split()[M_OF_index_start:M_OF_index_start+12]))
+    M_IF_list_wrong_order = list(map(float, run_row.split()[M_IF_index_start:M_IF_index_start+11])) #M_IF_11 is not in the file
+    M_IB_list_wrong_order = list(map(float, run_row.split()[M_IB_index_start:M_IB_index_start+12]))
+    M_CS_list_wrong_order = list(map(float, run_row.split()[M_CS_index_start:M_CS_index_start+12]))
+    M_ID_list_wrong_order = list(map(float, run_row.split()[M_ID_index_start:M_ID_index_start+12]))
+    M_IC_list_wrong_order = list(map(float, run_row.split()[M_IC_index_start:M_IC_index_start+12]))
+    M_OC_list_wrong_order = list(map(float, run_row.split()[M_OC_index_start:M_OC_index_start+12]))
+    M_OD_list_wrong_order = list(map(float, run_row.split()[M_OD_index_start:M_OD_index_start+12]))
+    M_OB_list_wrong_order = list(map(float, run_row.split()[M_OB_index_start:M_OB_index_start+12]))
+    M_OF_list_wrong_order = list(map(float, run_row.split()[M_OF_index_start:M_OF_index_start+12]))
     
     # Correct order of lists from [1, 10, 11, 12, 2, 3, 4, 5, 6, 7, 8, 9]
     # to [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] using sliced lists
