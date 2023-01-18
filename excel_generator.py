@@ -169,6 +169,36 @@ def create_bottom_matrix(run_row):
     return bottom_matrix
 
 
+def awful_way_to_fix_padding_in_file(fix_this_file):
+    """
+    ChatGPT fixed this for me hehe
+    """
+  # Open the file in read mode
+    with open(fix_this_file, "r") as f:
+        # Read the entire file into a list of lines
+        lines = f.readlines()
+
+    # Split each line into a list of columns
+    columns = [line.split() for line in lines]
+
+    # Calculate the maximum width of each column, taking into account the decimal point and negative sign
+    max_widths = [max(len(column) for column in column_list) for column_list in zip(*columns)]
+
+    # Open the file in write mode
+    with open(fix_this_file, "w") as f:
+        # Iterate over the lines in the list
+        for line in lines:
+            # Split the line into a list of columns
+            column_list = line.split()
+            # Format the line with the calculated column widths, taking into account the decimal point and negative sign
+            formatted_line = " ".join("{:>{}}".format(column, width) for column, width in zip(column_list, max_widths))
+            # Write the formatted line to the file
+            f.write(formatted_line + "\n")
+
+
+
+
+
 
 def find_all_start_indices(header_file):
     """
