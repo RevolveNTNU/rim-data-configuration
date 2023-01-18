@@ -26,7 +26,10 @@ def generate_txt_file_of_run(run_number, input_txt_file, output_txt_file):
         desired_run_row = f.readlines()[desired_row_index] 
     
     # Make .txt-file from desired row
-    make_final_txt_file_from_desired_row(desired_run_row, output_txt_file) 
+    make_final_txt_file_from_desired_row(desired_run_row, output_txt_file)
+        
+    # Fix padding in file so that all columns are vertically aligned
+    awful_way_to_fix_padding_in_file(output_txt_file)
     
 
 def make_final_txt_file_from_desired_row(run_row, output_txt_file):
@@ -39,18 +42,18 @@ def make_final_txt_file_from_desired_row(run_row, output_txt_file):
     
     with open(output_txt_file, "w") as f:
         # Write the header row to file
-        np.savetxt(f, [desired_row_configuration], fmt='%s', delimiter='\t')
+        np.savetxt(f, [desired_row_configuration], fmt='%s', delimiter='\t\t\t\t')
         
         # Write the top matrix to file
         for line in top_matrix:
             np.savetxt(f, line, fmt='%s', delimiter='\t')
         
         # Write the middle row to file
-        np.savetxt(f, [middle_row], fmt='%s', delimiter='\t')
+        np.savetxt(f, [middle_row], fmt='%s', delimiter='\t\t')
         
         # Write the bottom matrix to file
         for line in bottom_matrix:
-            np.savetxt(f, line, fmt='%s', delimiter='\t')
+            np.savetxt(f, line, fmt='%s', delimiter='\t\t')
 
 
 def create_top_matrix(run_row):
