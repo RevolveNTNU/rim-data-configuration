@@ -132,7 +132,7 @@ def create_bottom_matrix(run_row):
         create the bottom matrix """
         
     # Collect all info for the bottom matrix in lists 
-    M_IF_list_wrong_order = list(map(int, run_row.split()[M_IF_index_start:M_IF_index_start+12]))
+    M_IF_list_wrong_order = list(map(int, run_row.split()[M_IF_index_start:M_IF_index_start+11])) #M_IF_11 is not in the file
     M_IB_list_wrong_order = list(map(int, run_row.split()[M_IB_index_start:M_IB_index_start+12]))
     M_CS_list_wrong_order = list(map(int, run_row.split()[M_CS_index_start:M_CS_index_start+12]))
     M_ID_list_wrong_order = list(map(int, run_row.split()[M_ID_index_start:M_ID_index_start+12]))
@@ -144,7 +144,7 @@ def create_bottom_matrix(run_row):
     
     # Correct order of lists from [1, 10, 11, 12, 2, 3, 4, 5, 6, 7, 8, 9]
     # to [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] using sliced lists
-    M_IF_list_ordered = [M_IF_list_wrong_order[0]] + M_IF_list_wrong_order[4:] + M_IF_list_wrong_order[1:4]
+    M_IF_list_ordered = [M_IF_list_wrong_order[0]] + M_IF_list_wrong_order[3:] + [M_IF_list_wrong_order[1]] + ["X"] + [M_IF_list_wrong_order[2]]
     M_IB_list_ordered = [M_IB_list_wrong_order[0]] + M_IB_list_wrong_order[4:] + M_IB_list_wrong_order[1:4]
     M_CS_list_ordered = [M_CS_list_wrong_order[0]] + M_CS_list_wrong_order[4:] + M_CS_list_wrong_order[1:4]
     M_ID_list_ordered = [M_ID_list_wrong_order[0]] + M_ID_list_wrong_order[4:] + M_ID_list_wrong_order[1:4]
